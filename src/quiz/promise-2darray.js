@@ -18,7 +18,9 @@ function sum2DArray(arr) {
             reject('BAD INPUT: Expected array as input');
         }
         console.log('returning from sum');
-    });
+    })
+    .then((res) => {console.log(res)})
+    .catch((err) => {console.log(err)});
 }
 
 // Example usage:
