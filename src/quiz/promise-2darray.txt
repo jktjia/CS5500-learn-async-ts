@@ -1,1 +1,5 @@
 Explain the code execution based on the order of the messages logged in src/quiz/promise-2darray.txt.
+
+Both sumPromise1 and sumPromise2 are called and log to that console that they've return from the call.
+Then the catch logs the error in sumPromise2, and finally the timeouts end and the items in the array
+are added to the sum and then sumPromise1 prints its sum.

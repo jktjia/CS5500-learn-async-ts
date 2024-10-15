@@ -9,7 +9,7 @@ function sum2DArray(arr: number[][]): Promise<number> {
             for (let i = 0; i < arr.length; i++) {
                 for (let j = 0; j < arr[i].length; j++) {
                     console.log(`Adding ${arr[i][j]} to sum`);
-                    sum += arr[i][j];
+                    sum += arr[i][j]; 
                 }
             }
             resolve(sum);
@@ -17,6 +17,8 @@ function sum2DArray(arr: number[][]): Promise<number> {
         console.log('returning from sum');
     });
 }
+
+
 
 // Example usage:
 const array2D = [
@@ -26,7 +28,7 @@ const array2D = [
 ];
 
 const sumPromise1 = sum2DArray(array2D);
-console.log('sumPromise1:', sumPromise1);
+sumPromise1.then(v => console.log('sumPromise1:', v)).catch(e => console.log(e));
 
 const sumPromise2 = sum2DArray([]);
-console.log('sumPromise2:', sumPromise2);
+sumPromise2.then(v => console.log('sumPromise2:', v)).catch(e => console.log(e));
